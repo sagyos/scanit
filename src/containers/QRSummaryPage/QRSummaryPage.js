@@ -7,18 +7,18 @@ import { withRouter } from 'react-router-dom';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import withStyles from '@material-ui/core/styles/withStyles';
 import Grid from '@material-ui/core/Grid';
+import { Typography, Button } from '@material-ui/core';
 
 // Components
 import ItemsTable from '../../components/QRSummaryPage/ItemsTable/ItemsTable';
 
 // Css
 import { styles } from './QRSummaryPageCss';
-import { Typography, Button } from '@material-ui/core';
 
 class QRSummaryPage extends Component {
   render() {
-    const { classes } = this.props;
-
+    const { classes, scanResult } = this.props;
+    console.log(scanResult);
     return (
       <Grid container className={classes.main}>
         <CssBaseline />

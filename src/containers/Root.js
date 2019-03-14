@@ -7,7 +7,9 @@ import { MuiThemeProvider } from '@material-ui/core/styles';
 
 // Containers
 import NavbarContainer from './NavbarContainer/NavbarContainer';
+import HomePage from './HomePage/HomePage';
 import QRSummaryPage from './QRSummaryPage/QRSummaryPage';
+
 
 // Constants
 import theme from '../constants/theme'
@@ -18,9 +20,14 @@ const Root = () => (
   >
     <NavbarContainer />
     <Switch>
-      <Route path={'/'}
-            component={QRSummaryPage} />
-      <Redirect to={'/'} />
+      <Route
+          path={'/qrsummarypage/:scanresult'}
+          render= {({ match }) => (<QRSummaryPage scanResult={match.params.scanresult}/>)}
+      />
+      <Route
+          path={'/'}
+          render= {({ match }) => (<HomePage />)}
+      />
     </Switch>
   </MuiThemeProvider>
 )

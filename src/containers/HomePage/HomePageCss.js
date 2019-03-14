@@ -3,7 +3,7 @@ import theme from '../../constants/theme';
 
 export const styles = {
   main: {
-    marginTop: theme.spacing.unit * 5,
+    marginTop: theme.spacing.unit * 3,
     width: '100%',
     display: 'flex',
     justifyContent: 'center',
@@ -11,6 +11,13 @@ export const styles = {
   contentGrid: {
     display: 'flex',
     justifyContent: 'center',
+  },
+  btn: {
+    marginTop: theme.spacing.unit * 3,
+  },
+  img: {
+    height: '700px',
+    width: '700px',
   },
   text: {
     color: '#fff',
