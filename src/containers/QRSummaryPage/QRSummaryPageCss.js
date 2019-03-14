@@ -15,10 +15,18 @@ export const styles = {
   },
   createQR: {
     marginTop: theme.spacing.unit * 3,
-    // backgroundColor: theme.palette.secondary.dark,
     color: '#fff',
-    '&:hover': {
-      // backgroundColor: theme.palette.secondary.main,
-    }
+  },
+  qrCode: {
+    marginTop: theme.spacing.unit * 3,
+    marginBottom: theme.spacing.unit * 3,
+  },
+  btnGrid: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  downloadBtn: {
+    marginLeft: theme.spacing.unit * 3,
   },
 };

@@ -58,16 +58,18 @@ class HomePage extends Component {
                     style={{ width: '500px', height: '500px' }}
                 />
                 :
-                <img src={require('../../assets/ScanIT.png')} className={classes.img}/>
+                <img src={require('../../assets/ScanIT.png')} alt="logo" className={classes.img}/>
             }
         </Grid>
           <Grid item sm={8} xs={11} className={classes.contentGrid}>
               {this.state.isScanning ?
-                  <Button className={classes.btn} color="default" variant="contained" onClick={this.handleScanButton}>ביטול סריקת QR</Button>
+                  <Button className={classes.cancelBtn} variant="contained" onClick={this.handleScanButton}>
+                    ביטול סריקת QR
+                  </Button>
                 :
-                  <React.Fragment>
-                      <Button className={classes.btn} color="secondary" variant="contained" onClick={this.handleScanButton}>סריקת QR</Button>
-                  </React.Fragment>
+                  <Button className={classes.btn} color="secondary" variant="contained" onClick={this.handleScanButton}>
+                    סריקת QR
+                  </Button>
               }
           </Grid>
       </Grid>

@@ -38,4 +38,12 @@ export const styles = {
       fontSize: '2.4rem',
     },
   },
+  cancelBtn: {
+    marginTop: theme.spacing.unit * 3,
+    backgroundColor: '#d32f2f',
+    color: '#fff',
+    '&:hover': {
+      backgroundColor: '#9a0007',
+    }
+  }
 };
